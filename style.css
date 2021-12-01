@@ -1,0 +1,121 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: stretch;
+}
+
+html {
+  font-family: "Kumbh Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+body {
+  padding: 0 25px;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+.card {
+  width: 325px;
+  max-width: 100%;
+  border-radius: 20px;
+  background-color: #fff;
+  margin: 150px auto 40px;
+  position: relative;
+  box-shadow: 0 40px 40px -20px hsl(238deg 29% 16% / 50%);
+}
+
+.img {
+  position: absolute;
+  margin: -110px 45px 0;
+}
+
+.img__main,
+.img__shadow {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+}
+
+.img__main {
+  z-index: 2;
+  top: 0;
+  position: relative;
+  padding-bottom: 25px;
+}
+
+.img__shadow {
+  z-index: 1;
+  bottom: 0;
+}
+
+.card__title {
+  font-size: 2rem;
+  text-align: center;
+  color: hsl(238, 29%, 16%);
+  padding: 130px 0 0 0;
+  margin: 0;
+}
+
+.faq {
+  padding: 20px 25px 50px;
+}
+
+.faq__item {
+  padding: 1rem 0;
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+
+.faq__heading {
+  color: hsl(237, 12%, 33%);
+  font-size: 0.825rem;
+  list-style: none;
+}
+.faq__heading:hover {
+  color: hsl(14, 88%, 65%);
+}
+
+.faq__heading::after {
+  content: url(./images/icon-arrow-down.svg);
+  padding-left: 5px;
+  float: right;
+}
+
+.faq__item[open] .faq__heading {
+  color: hsl(238, 29%, 16%);
+  font-weight: 700;
+}
+.faq__item[open] .faq__heading::after {
+  transform: rotateX(180deg);
+}
+
+.faq__text {
+  color: hsl(240, 6%, 50%);
+  margin: 0.75rem 0 0.3rem;
+  line-height: 1.5;
+  font-size: 0.75rem;
+  width: 36ch;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 1em;
+}
+
+.attribution a {
+  color: #fff;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 1440px) {
+}
