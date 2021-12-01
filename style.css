@@ -32,12 +32,16 @@ body {
   box-shadow: 0 40px 40px -20px hsl(238deg 29% 16% / 50%);
 }
 
+.img__box {
+  display: none;
+}
+
 .img {
   position: absolute;
   margin: -110px 45px 0;
 }
 
-.img__main,
+.img__main *,
 .img__shadow {
   width: 100%;
   height: auto;
@@ -45,7 +49,7 @@ body {
   left: 0;
 }
 
-.img__main {
+.img__main * {
   z-index: 2;
   top: 0;
   position: relative;
@@ -61,12 +65,12 @@ body {
   font-size: 2rem;
   text-align: center;
   color: hsl(238, 29%, 16%);
-  padding: 130px 0 0 0;
+  padding: 0 0 20px 0;
   margin: 0;
 }
 
 .faq {
-  padding: 20px 25px 50px;
+  padding: 130px 25px 50px;
 }
 
 .faq__item {
@@ -78,9 +82,7 @@ body {
   color: hsl(237, 12%, 33%);
   font-size: 0.825rem;
   list-style: none;
-}
-.faq__heading:hover {
-  color: hsl(14, 88%, 65%);
+  cursor: pointer;
 }
 
 .faq__heading::after {
@@ -117,5 +119,82 @@ body {
   font-weight: 700;
 }
 
-@media only screen and (min-width: 1440px) {
+@media only screen and (min-width: 1100px) {
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    width: 960px;
+    margin: 0;
+    display: flex;
+  }
+
+  .card__title {
+    text-align: left;
+  }
+
+  .img {
+    overflow: hidden;
+  }
+
+  .img__box {
+    display: inline;
+    position: absolute;
+    bottom: 20%;
+    left: -11%;
+    width: 22.5%;
+    height: auto;
+    z-index: 3;
+  }
+
+  .img {
+    position: relative;
+    margin: 0;
+    flex-basis: 44%;
+    background-image: url(./images/bg-pattern-desktop.svg);
+    background-size: 250%;
+    background-repeat: no-repeat;
+    background-position: right 67.5%;
+  }
+
+  .img__main {
+      position: absolute;
+      right: 0;
+      bottom: 7.5%;
+      width: 120%;
+      height: auto;
+  }
+
+  .img__shadow {
+    display: none;
+  }
+
+  .faq {
+    flex-basis: 56%;
+    padding: 65px 110px 90px 90px;
+  }
+
+  .faq__heading {
+    font-size: 0.9em;
+  }
+  .faq__heading:hover, 
+  .faq__heading:active {
+    color: hsl(14, 88%, 65%);
+  }
+
+  .faq__text {
+    width: unset;
+  }
+
+  .attribution {
+    margin: 0;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
